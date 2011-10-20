@@ -1,0 +1,55 @@
+//  PLEASE NOTE:
+//
+//      Variables in Stylus don't require
+//      the sigil (the leading “$”). I prefer using
+//      the sigil on variables, so it’s obvious that
+//      I’m using a variable, instead of a CSS property
+//      that happens to be the same name.
+//
+//      -   CSS code should be familiar
+//      -   Stylus functions, mixins, etc. are identifiable by parentheses
+//      -   Variables are identifiable by the dollar-sign sigil
+//
+//      This way $font-size is never confused with CSS’s own font-size,
+//      and I enjoy the benefits of Stylus with no introduced drawbacks. :)
+//
+//  --Zearin
+//  2011-Aug-31
+
+//
+// Important numbers
+//
+
+$column         =   (100% / 18)
+$font-size      =   16
+$line           =   1.5 * $font-size
+$em             =   1em * ($font-size / $font-size)
+
+$outer-margin   =   unit($column,'%')   //  Currently same as $column; declared for future use
+
+$DEBUG          =   false
+$DEBUG-STYLES   =   debug-styles()
+
+//padding()
+
+
+debug-styles()
+    absolute        top left
+    box-sizing      border-box
+    display         block
+    margin          0 $outer-margin
+    padding         0.25em 1em
+    background      rgba(255,255,255,0.5)
+    font-size       unit( ($em/2) , 'em')
+    font-family     Monaco, "Courier New", Courier, monospace
+    text-shadow     0 1px 1px #def
+    letter-spacing  1px
+
+
+debug( $string )
+    if $DEBUG is true
+        /*  BEGIN DEBUG STYLES */
+        body::before
+            $DEBUG-STYLES
+            content $string
+        /*  END DEBUG STYLES */
