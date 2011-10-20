@@ -17,8 +17,7 @@
         /* Reset baseline grid to 16/16 = 1 */
         font-size   1em
 
-    //  @TODO   Add note about #twoway and div[ role="main" ]
-    div[ role="main" ]
+    #twoway
         .wrapper
             float   left
             width   50%
@@ -42,6 +41,7 @@
         font-size   1em
 
     header
+    #twoway
         margin      0 unit((3 * $column), '%')
 
 //    div[ role="main" ]
@@ -56,20 +56,17 @@
         /* Zoom baseline grid to 17/16 = 1.0625 */
         font-size   1em * ((1+$font-size)/$font-size)
 
-    div[ role="main" ]
-        width       (6 * 12.5%)
-        margin-left 12.5% !important
-
 /* @media screen and (min-width: 1392px) */
 @media screen and (min-width:  87em)
     debug('min-width: 87em/1392px (8 columns)')
 
     body
         /* Reset baseline grid to 16/16 = 1.0 */
-        font-size  1em
+        font-size   1em
 
     header
-        margin 0 $column*5
+    #twoway
+        margin  0 $column*5 /*  27.77777777777778% */
 
 
 /* @media screen and (min-width: 1680px) */

@@ -25,7 +25,7 @@ $font-size      =   16
 $line           =   1.5 * $font-size
 $em             =   1em * ($font-size / $font-size)
 
-$outer-margin   =   unit($column,'%')   //  Currently same as $column; declared for future use
+$outer-margin   =   unit($column , '%')   //  Currently same as $column; declared for future use
 
 $DEBUG          =   false
 $DEBUG-STYLES   =   debug-styles()
@@ -40,7 +40,7 @@ debug-styles()
     margin          0 $outer-margin
     padding         0.25em 1em
     background      rgba(255,255,255,0.5)
-    font-size       unit( ($em/2) , 'em')
+    font-size       unit(($em/2) , 'em')
     font-family     Monaco, "Courier New", Courier, monospace
     text-shadow     0 1px 1px #def
     letter-spacing  1px

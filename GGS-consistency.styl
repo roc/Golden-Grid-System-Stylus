@@ -10,8 +10,7 @@
 */
 html
     height  100%
-    -webkit-text-size-adjust    100%
-    -ms-text-size-adjust        100%
+    text-size-adjust    100%
 
 
 body
@@ -76,29 +75,22 @@ select
 
 
 button
-html input[type="button"]
-    cursor              pointer
-    -webkit-appearance  button
-
-    input
-        &[type="reset"]
-        &[type="submit"]
-            cursor              pointer
-            -webkit-appearance  button
+input
+    &[type="button"]
+    &[type="reset"]
+    &[type="submit"]
+        cursor              pointer
+        appearance          button
 
 
 input
     &[type="checkbox"]
     &[type="radio"]
-        -webkit-box-sizing  border-box
-        -moz-box-sizing     border-box
-        -o-box-sizing       border-box
-        -ms-box-sizing      border-box
         box-sizing          border-box
 
 
 textarea
-    overflow       auto
+    overflow    auto
 
 
 table

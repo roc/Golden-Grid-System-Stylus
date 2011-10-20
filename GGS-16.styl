@@ -15,13 +15,14 @@
     debug('min-width: 117em/1872px (16 columns)')
 
     header
+    #twoway
         margin  0 $column*1
 
-
-    header
-        > .wrapper
+        .wrapper
             width       37.5%
-            margin-left 25%
+
+            &:first-child
+                margin-left 25%
 
 
 
