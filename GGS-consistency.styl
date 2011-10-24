@@ -10,7 +10,7 @@
 */
 html
     height  100%
-    text-size-adjust    100%
+    vendor(text-size-adjust, 100%, only: webkit ms, ignore: moz o official)
 
 
 body
@@ -74,23 +74,19 @@ select
     vertical-align  baseline
 
 
+//  Un-Stylus-like selector used to keep fidelity with original CSS
 button
-    cursor              pointer
-    appearance          button
-
-
-input
-    &[type="button"]
-    &[type="reset"]
-    &[type="submit"]
-        cursor              pointer
-        appearance          button
+html input[type="button"]
+input[type="reset"]
+input[type="submit"]
+        cursor      pointer
+        vendor(appearance, button, only:webkit, ignore:moz o ms official)
 
 
 input
     &[type="checkbox"]
     &[type="radio"]
-        box-sizing          border-box
+        box-sizing(border-box, ignore:null)
 
 
 textarea
