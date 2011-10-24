@@ -1,3 +1,5 @@
+@import 'nib' unless vendor-prefixes is defined
+
 //  PLEASE NOTE:
 //
 //      Variables in Stylus don't require
@@ -20,6 +22,15 @@
 // Important numbers
 //
 
+//  @TODO
+//      Clean up these calculations!
+//      They were copied from the SASS/LESS
+//      stylesheets and modified only just
+//      enough to work.
+//
+//      (Some math and CSS unit calculations differ
+//      between the various CSS pre-processors,
+//      which is why the modification was required.)
 $column         =   (100% / 18)
 $font-size      =   16
 $line           =   1.5 * $font-size
@@ -27,10 +38,12 @@ $em             =   1em * ($font-size / $font-size)
 
 $outer-margin   =   unit($column , '%')   //  Currently same as $column; declared for future use
 
+
+//  @TODO
+//      Refactor all debugging to a separate
+//      stylesheet
 $DEBUG          =   false
 $DEBUG-STYLES   =   debug-styles()
-
-//padding()
 
 
 debug-styles()
@@ -41,7 +54,7 @@ debug-styles()
     padding         0.25em 1em
     background      rgba(255,255,255,0.5)
     font-size       unit(($em/2) , 'em')
-    font-family     Monaco, "Courier New", Courier, monospace
+    font-family     Monaco, 'Courier New', Courier, monospace
     text-shadow     0 1px 1px #def
     letter-spacing  1px
 
