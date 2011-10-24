@@ -1,15 +1,88 @@
-/*
-*
-*  Golden Grid System (1.01)	<http://goldengridsystem.com/>
-*  by Joni Korpi 				<http://jonikorpi.com/>
-*  licensed under MIT			<http://opensource.org/licenses/mit-license.php>
-*
-*/
+/*!
+ *
+ *  Golden Grid System (1.01)	<http://goldengridsystem.com/>
+ *  by Joni Korpi 				<http://jonikorpi.com/>
+ *  licensed under MIT			<http://opensource.org/licenses/mit-license.php>
+ *
+ */
+@import 'GGS-config'
+
+
+/*!
+ *
+ *   Margin padding and border resets
+ *   except for form elements
+ *
+ */
 @import 'GGS-reset'
+
+
+//  WORKAROUND
+//
+//  Stylus won't print block comments from imported files.
+//
+//  @see    https://github.com/LearnBoost/stylus/issues/444
+//
+//  Copying block comments here as a workaround,
+//  In order to see where @imported files are
+//  concatenated in the output.
+//
+
+/*!
+ *
+ *    Consistency fixes adopted from
+ *    http//necolas.github.com/normalize.css/
+ *
+ */
 @import 'GGS-consistency'
+
+/*!
+ *
+ *    Simple fluid media
+ *
+ */
 @import 'GGS-fluid-media'
+
+
+/*!
+ *
+ *   Zoomable baseline grid
+ *   type size presets
+ *
+ */
 @import 'GGS-baseline'
 
+
+/*!
+ *
+ *  Four-column grid active
+ *  ----------------------------------------
+ *  Margin   | #  1   2   3   4   |   Margin
+ *  5.55555% | %  25  50  75  100 | 5.55555%
+ *
+ */
 @import 'GGS-4'
+
+
+/*!
+ *
+ *  Eight-column grid active
+ *  ----------------------------------------------------------------------
+ *  Margin   | #  1     2     3     4     5     6     7     8   |   Margin
+ *  5.55555% | %  12.5  25.0  37.5  50.0  62.5  75.0  87.5  100 | 5.55555%
+ *
+ *
+ */
 @import 'GGS-8'
+
+
+/*!
+ *
+ *  Sixteen-column grid active
+ *  ----------------------------------------------------------------------------------------------------------------------
+ *  Margin   | #  1     2     3     4     5     6     7     8     9     10    11    12    13    14    15    16  |   Margin
+ *  5.55555% | %  6.25  12.5  18.75 25.0  31.25 37.5  43.75 50.0  56.25 62.5  68.75 75.0  81.25 87.5  93.75 100 | 5.55555%
+ *
+ *
+ */
 @import 'GGS-16'
