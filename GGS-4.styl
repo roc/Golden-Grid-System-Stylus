@@ -1,14 +1,14 @@
 @import 'GGS-config' unless $column is defined and $outer-margin is defined
 
 
-/*
-*
-*  Four-column grid active
-*  ----------------------------------------
-*  Margin   | #  1   2   3   4   |   Margin
-*  5.55555% | %  25  50  75  100 | 5.55555%
-*
-*/
+/*!
+ *
+ *  Four-column grid active
+ *  ----------------------------------------
+ *  Margin   | #  1   2   3   4   |   Margin
+ *  5.55555% | %  25  50  75  100 | 5.55555%
+ *
+ */
 header
 #twoway
     margin  0 $outer-margin
@@ -22,21 +22,21 @@ h3
     margin  (1em * 24/$font-size) 0 (1em * 24/$font-size)
 
 
-/*
-*  Simple elastic gutters
-*  Note: box-sizing will not work in IE6-8
-*/
+/*!
+ *  Simple elastic gutters
+ *  Note: box-sizing will not work in IE6-8
+ */
 .wrapper
     padding     0 0.75em
     box-sizing  border-box
 
 
-/*
-*
-*  Fixes for IE6-8
-*  http://jonikorpi.com/leaving-old-IE-behind/
-*
-*/
+/*!
+ *
+ *  Fixes for IE6-8
+ *  http://jonikorpi.com/leaving-old-IE-behind/
+ *
+ */
 .ie
     body
         width       1em * (640/$font-size)
@@ -48,7 +48,7 @@ h3
         margin      (1em * (48/42)) 0 (1em * (24/42))
 
 
-/* @media screen and (min-width: 640px) */
+/*! @media screen and (min-width: 640px) */
 @media screen and (min-width:  40em)
     debug('min-width: 40em/640px (4 columns)')
 
