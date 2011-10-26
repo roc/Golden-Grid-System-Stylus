@@ -1,5 +1,7 @@
 @import 'GGS-config' unless $column is defined and $outer-margin is defined
+@import 'GGS-mixins'
 
+$grid-size=16
 
 /*!
  *
@@ -20,15 +22,15 @@
 
     header
         .wrapper
-            width       37.5%
-            margin-left 25%
+            ggs-width(6)
+            ggs-lmargin(4)
 
     #twoway
         .wrapper
-            width   25%
+            ggs-width(4)
 
             &:first-child
-                margin-left 25%
+                ggs-lmargin(4)
 
 
 

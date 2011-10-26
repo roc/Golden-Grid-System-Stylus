@@ -1,4 +1,7 @@
 @import 'GGS-config' unless $column is defined and $outer-margin is defined
+@import 'GGS-mixins'
+
+$grid-size=8
 
 /*!
  *
@@ -13,32 +16,26 @@
 @media screen and (min-width:  45em)
     debug('min-width: 45em/720px (8 columns)')
 
-    body
-        /* Reset baseline grid to 16/16 = 1 */
-        font-size   1em
+    ggs-reset-baseline()
 
     #twoway
         .wrapper
             float   left
-            width   50%
+            ggs-width(4)
 
 
 /*! @media screen and (min-width: 888px) */
 @media screen and (min-width: 55.5em)
     debug('min-width: 55.5em/888px (8 columns)')
 
-    body
-        /* Zoom baseline grid to 17/16 = 1.0625 */
-        font-size   1em * ((1+$font-size)/$font-size)
+    ggs-zoom-baseline()
 
 
 /*! @media screen and (min-width 984px) */
 @media screen and (min-width:  61.5em)
     debug('min-width: 61.5em/984px (8 columns)')
 
-    body
-        /* Reset baseline grid to 16/16 = 1.0 */
-        font-size   1em
+    ggs-reset-baseline()
 
     header
     #twoway
@@ -52,17 +49,13 @@
 @media screen and (min-width:  75em)
     debug('min-width: 75em/1200px (8 columns)')
 
-    body
-        /* Zoom baseline grid to 17/16 = 1.0625 */
-        font-size   1em * ((1+$font-size)/$font-size)
+    ggs-zoom-baseline()
 
 /*! @media screen and (min-width: 1392px) */
 @media screen and (min-width:  87em)
     debug('min-width: 87em/1392px (8 columns)')
 
-    body
-        /* Reset baseline grid to 16/16 = 1.0 */
-        font-size   1em
+    ggs-reset-baseline()
 
     header
     #twoway
@@ -73,6 +66,4 @@
 @media screen and (min-width:  105em)
     debug('min-width: 105em/1680px (8 columns)')
 
-    body
-        /* Zoom baseline grid to 17/16 = 1.0625 */
-        font-size   1em * ((1+$font-size)/$font-size)
+    ggs-zoom-baseline()
