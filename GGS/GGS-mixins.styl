@@ -7,8 +7,8 @@
  *  -----------------------------------------------------------------
  */
 
-@import 'nib'           unless vendor-prefixes is defined
-@import 'GGS-config'    unless $column is defined
+@import 'nib'           unless  vendor-prefixes is defined
+@import 'GGS-config'    unless  $column is defined
 
 
 /*
@@ -38,8 +38,8 @@ ggs-width( $columns )
 /*
  *  Sets `margin-left` %
  */
-ggs-lmargin( $columns )
-    margin-left ggs-width-columns( $columns )
+ggs-margin( $columns, $side='left' )
+    margin-$side    ggs-width-columns( $columns )
 
 /*
  *  Sets the baseline grid
